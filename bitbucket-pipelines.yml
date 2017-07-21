@@ -1,0 +1,22 @@
+# You can use a Docker image from Docker Hub or your own container
+# registry for your build environment.
+image: python:3
+pipelines:
+  default:
+    - step:
+        script:
+          - apt-get update
+          - apt-get install -y libxmlsec1-dev xmlsec1
+          - make test
+          - make pipelines_requirements
+          - make docs
+  branches:
+    master:
+      - step:
+          script:
+            - apt-get update
+            - apt-get install -y libxmlsec1-dev xmlsec1
+            - make test
+            - make pipelines_requirements
+            - make docs
+            - make publish

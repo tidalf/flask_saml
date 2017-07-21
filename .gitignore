@@ -1,0 +1,3 @@
+docs/_build/
+.eggs/
+Flask_SAML.egg-info/
