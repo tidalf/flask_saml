@@ -13,7 +13,6 @@ with open(os.path.join(here, 'flask_saml.py')) as v_file:
         re.S).match(v_file.read()).group(1)
 
 install_requires = [
-    'json_log_formatter>=0.1.0',
     'Flask>=0.8.0',
     'blinker>=1.1',
     'pysaml2>=4.0.0,<5',
