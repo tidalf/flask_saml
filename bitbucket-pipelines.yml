@@ -10,6 +10,7 @@ pipelines:
           - make test
           - make pipelines_requirements
           - make docs
+          - curl -sSL https://download.sourceclear.com/ci.sh | bash
   branches:
     master:
       - step:
@@ -19,4 +20,5 @@ pipelines:
             - make test
             - make pipelines_requirements
             - make docs
+            - curl -sSL https://download.sourceclear.com/ci.sh | bash
             - make publish
