@@ -15,7 +15,7 @@ with open(os.path.join(here, 'flask_saml.py')) as v_file:
 install_requires = [
     'Flask>=0.8.0',
     'blinker>=1.1',
-    'pysaml2>=4.0.0,<5',
+    'pysaml2>=5.0.0',
 ]
 
 setuptools.setup(
